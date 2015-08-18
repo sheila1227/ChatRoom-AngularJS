@@ -118,7 +118,6 @@ app.controller("chatCtrl",['$scope','socket','randomColor','userService',functio
     socket.on('allUser', function(data) {
         if(!$scope.hasLogined) return;
         $scope.users=data;
-        $scope.users[""].hasNewMessage=false;
     });
 
     //接收到用户退出消息
